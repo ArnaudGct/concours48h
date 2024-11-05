@@ -15,7 +15,7 @@
  */
 function head(string $title = ''): string
 {
-    return  <<<HTML_HEAD
+    return <<<HTML_HEAD
     <!DOCTYPE html>
     <html lang="fr">
     
@@ -23,6 +23,7 @@ function head(string $title = ''): string
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/hamburgers.css">
         <link rel="stylesheet" href="./assets/css/redimension.css">
         <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
         <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
@@ -43,30 +44,33 @@ function header_main(string $page = ''): string
                         <img src="./assets/img/logo.webp" alt="">
                     </div>
                 </a>
-                <div class="btn_burger-header_mobile">
-                    <i class="fi fi-br-menu-burger"></i>
-                </div>
+                <button class="hamburger--spin" type="button" id="btn_burger_check">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
             </div>
         </div>
-    </div>
+        <div class="menu-header_mobile hidden">
+            <nav>
+                <ul class="menu_content-header_mobile">
+                    <li>
+                        <a href="./index.php#accueil-index" class="btn_li-header_desktop ' . ($page === "index" ? 'header_active' : '') . '">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="./le_concours.php" class="btn_li-header_desktop ' . ($page === "concours" ? 'header_active' : '') . '">Le concours</a>
+                    </li>
+                    <li>
+                        <a href="./le_reglement.php" class="btn_li-header_desktop ' . ($page === "reglement" ? 'header_active' : '') . '">Le règlement</a>
+                    </li>
+                    <li>
+                        <a href="./les_editions.php" class="btn_li-header_desktop ' . ($page === "editions" ? 'header_active' : '') . '">Les éditions</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
-    <div class="menu-header_mobile hidden">
-        <nav>
-            <ul class="menu_content-header_mobile">
-                <li>
-                    <a href="./index.php#accueil-index">Accueil</a>
-                </li>
-                <li>
-                    <a href="./le_concours.php">Le concours</a>
-                </li>
-                <li>
-                    <a href="./le_reglement.php">Le règlement</a>
-                </li>
-                <li>
-                    <a href="./les_editions.php">Les éditions</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="background-header_mobile"></div>
     </div>
 </header>
 
@@ -146,7 +150,7 @@ function footer_main(): string
  */
 function isGetMethod(): bool
 {
-    return  ($_SERVER['REQUEST_METHOD'] === 'GET') ;
+    return ($_SERVER['REQUEST_METHOD'] === 'GET');
 }
 
 /**
@@ -154,13 +158,14 @@ function isGetMethod(): bool
  */
 function isPostMethod(): bool
 {
-    return  ($_SERVER['REQUEST_METHOD'] === 'POST') ;
+    return ($_SERVER['REQUEST_METHOD'] === 'POST');
 }
 
-function verif_user($user){
-    if(isset($user) && $user === true) {
+function verif_user($user)
+{
+    if (isset($user) && $user === true) {
         return true;
-    }else{
+    } else {
         return false;
     }
 }

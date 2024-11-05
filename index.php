@@ -10,31 +10,31 @@ echo head('Le concours 48h - MMI Angoulême');
     <?php echo header_main('index'); ?>
 
     <main>
-        <div style="height: 5.375rem;"></div>
-
         <section id="accueil_index" class="section-accueil_index">
             <div class="video-accueil_index">
-                <div class="video_wrapper-accueil_index">
-                    <div class="gradient_video_wrapper-accueil_index"></div>
-                    <iframe src="https://www.youtube.com/embed/5eD8H8bgNDM?si=pbBA0DZBnBjet58b"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="content-accueil_index">
-                    <div class="informations-accueil_index">
-                        <div class="date-accueil_index">
-                            <p>Prochaine édition : 8 au 12 janvier 2025</p>
-                        </div>
-                        <div class="title-accueil_index">
-                            <p>Le concours 48h</p>
-                        </div>
-                        <div class="description-accueil_index">
-                            <p>Tout commence par une idée.</p>
-                        </div>
+                <div class="video_content-accueil_index">
+                    <div class="video_wrapper-accueil_index">
+                        <div class="gradient_video_wrapper-accueil_index"></div>
+                        <iframe src="https://www.youtube.com/embed/5eD8H8bgNDM?si=pbBA0DZBnBjet58b"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
-                    <div class="btn_all">
-                        <a role="button" href="./les_editions.php">S'inscrire</a>
+                    <div class="content-accueil_index">
+                        <div class="informations-accueil_index">
+                            <div class="date-accueil_index">
+                                <p>Prochaine édition : 8 au 12 janvier 2025</p>
+                            </div>
+                            <div class="title-accueil_index">
+                                <p>Le concours 48h</p>
+                            </div>
+                            <div class="description-accueil_index">
+                                <p>Tout commence par une idée.</p>
+                            </div>
+                        </div>
+                        <div class="btn_all">
+                            <a role="button" href="./les_editions.php">S'inscrire</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -297,71 +297,71 @@ echo head('Le concours 48h - MMI Angoulême');
     <?php echo footer_main(); ?>
 
 
-    <script src="./assets/js/menu.js"></script>
     <script src="./assets/js/anime.min.js"></script>
+    <script src="./assets/js/menu.js"></script>
     <script>
 
         // --------------------------------------------
 
-        // Compteur du début du concours
-        const targetDate = new Date('January 10, 2025 18:00:00').getTime();
+        // // Compteur du début du concours
+        // const targetDate = new Date('January 10, 2025 18:00:00').getTime();
 
-        // Mettre à jour le minuteur toutes les secondes
-        const interval = setInterval(function () {
-            // Obtenir la date actuelle
-            const currentDate = new Date().getTime();
+        // // Mettre à jour le minuteur toutes les secondes
+        // const interval = setInterval(function () {
+        //     // Obtenir la date actuelle
+        //     const currentDate = new Date().getTime();
 
-            // Calculer la différence entre la date cible et la date actuelle
-            const difference = targetDate - currentDate;
+        //     // Calculer la différence entre la date cible et la date actuelle
+        //     const difference = targetDate - currentDate;
 
-            // Calculer les jours, heures, minutes et secondes restantes
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+        //     // Calculer les jours, heures, minutes et secondes restantes
+        //     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        //     const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        //     const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        //     const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-            // Mettre à jour l'affichage du minuteur
-            document.querySelector('#countdown').innerHTML = `<p>${days}j ${hours}h ${minutes}min ${seconds}s</p>`;
+        //     // Mettre à jour l'affichage du minuteur
+        //     document.querySelector('#countdown').innerHTML = `<p>${days}j ${hours}h ${minutes}min ${seconds}s</p>`;
 
-            // Vérifier si le minuteur a atteint zéro
-            if (difference < 0) {
-                clearInterval(interval); // Arrêter le minuteur lorsque la date cible est atteinte
-                document.querySelector('#countdown').innerHTML = "<p>C'est parti !</p>";
-            }
-        }, 1000); // Répéter toutes les secondes
+        //     // Vérifier si le minuteur a atteint zéro
+        //     if (difference < 0) {
+        //         clearInterval(interval); // Arrêter le minuteur lorsque la date cible est atteinte
+        //         document.querySelector('#countdown').innerHTML = "<p>C'est parti !</p>";
+        //     }
+        // }, 1000); // Répéter toutes les secondes
 
 
-        // Compteur de la fin du concours
+        // // Compteur de la fin du concours
 
-        // Ajouter 48 heures (48 * 60 * 60 * 1000 millisecondes)
-        const nouveauTimestamp = targetDate + (48 * 60 * 60 * 1000);
+        // // Ajouter 48 heures (48 * 60 * 60 * 1000 millisecondes)
+        // const nouveauTimestamp = targetDate + (48 * 60 * 60 * 1000);
 
-        // Créer un nouvel objet Date avec le timestamp mis à jour
-        const secondTargetDate = new Date(nouveauTimestamp);
+        // // Créer un nouvel objet Date avec le timestamp mis à jour
+        // const secondTargetDate = new Date(nouveauTimestamp);
 
-        // Mettre à jour le deuxième minuteur toutes les secondes
-        const secondInterval = setInterval(function () {
-            // Obtenir la date actuelle
-            const currentDate = new Date().getTime();
+        // // Mettre à jour le deuxième minuteur toutes les secondes
+        // const secondInterval = setInterval(function () {
+        //     // Obtenir la date actuelle
+        //     const currentDate = new Date().getTime();
 
-            // Calculer la différence entre la date cible et la date actuelle
-            const difference = secondTargetDate - currentDate;
+        //     // Calculer la différence entre la date cible et la date actuelle
+        //     const difference = secondTargetDate - currentDate;
 
-            // Calculer les jours, heures, minutes et secondes restantes
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor(difference / (1000 * 60 * 60));
-            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+        //     // Calculer les jours, heures, minutes et secondes restantes
+        //     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        //     const hours = Math.floor(difference / (1000 * 60 * 60));
+        //     const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        //     const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-            // Mettre à jour l'affichage du deuxième minuteur
-            document.querySelector('#countdown_48h').innerHTML = `<p>${hours}h ${minutes}min ${seconds}s</p>`;
+        //     // Mettre à jour l'affichage du deuxième minuteur
+        //     document.querySelector('#countdown_48h').innerHTML = `<p>${hours}h ${minutes}min ${seconds}s</p>`;
 
-            // Vérifier si le deuxième minuteur a atteint zéro
-            if (difference < 0) {
-                clearInterval(secondInterval); // Arrêter le deuxième minuteur lorsque la date cible est atteinte
-                document.querySelector('#countdown_48h').innerHTML = "<p>Le concours est terminé !</p>";
-            }
-        }, 1000); // Répéter toutes les secondes
+        //     // Vérifier si le deuxième minuteur a atteint zéro
+        //     if (difference < 0) {
+        //         clearInterval(secondInterval); // Arrêter le deuxième minuteur lorsque la date cible est atteinte
+        //         document.querySelector('#countdown_48h').innerHTML = "<p>Le concours est terminé !</p>";
+        //     }
+        // }, 1000); // Répéter toutes les secondes
 
 
 

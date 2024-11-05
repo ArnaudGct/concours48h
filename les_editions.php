@@ -6,7 +6,7 @@ echo head('Le concours 48h - MMI Angoulême');
 ?>
 
 <body>
-    <?php echo header_main(); ?>
+    <?php echo header_main(page: 'editions'); ?>
 
     <main class="main_all">
         <div style="height: calc(5.5625rem + 3.125rem);"></div>

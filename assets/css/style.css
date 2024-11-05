@@ -17,6 +17,12 @@ html {
   scroll-padding-top: 5.625rem;
 }
 
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
 :root {
   --Truffle-Trouble: #a35139;
   --Background: #f9f5ec;
@@ -49,19 +55,21 @@ body {
   justify-content: center;
   align-items: center;
 
-  background-color: #fee6c6;
+  /* background-color: var(--Background); */
+  /* border-radius: 0rem 0rem 0.625rem 0.625rem; */
 
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
 
   width: 100%;
-  z-index: 100;
+  z-index: 99;
 }
 
 .flex_content-header_mobile {
-  width: 90%;
+  width: 80%;
+
+  z-index: 99;
 }
 
 .content-header_mobile {
@@ -69,24 +77,45 @@ body {
   justify-content: space-between;
   align-items: center;
 
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 0rem;
   width: 100%;
+
+  z-index: 99;
 }
 
 .logo-header_mobile img {
   width: auto;
-  height: 3.125rem;
+  height: 2.8125rem;
+
+  z-index: 99;
 }
 
-.btn_burger-header_mobile i {
-  font-size: 1.875rem;
-  color: var(--Abysall-Anchorfish-Blue);
+.btn_burger-header_mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 70px;
+  cursor: pointer;
+
+  transform: scale(0.4);
+  z-index: 100;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 30px !important;
+  height: 3px !important;
+  border-radius: 20px !important;
+  background-color: var(--Abysall-Anchorfish-Blue) !important;
 }
 
 .trait-header_mobile {
   width: 90%;
   height: 1px;
   background-color: var(--Abysall-Anchorfish-Blue);
+
+  z-index: 99;
 }
 
 .menu-header_mobile {
@@ -96,22 +125,22 @@ body {
   align-items: center;
 
   position: fixed;
-  top: 5.625rem;
+  top: 4.6875rem;
   left: 0;
 
-  background: linear-gradient(0deg, #f9eddd 1.37%, #ffe6c4 97.76%);
   z-index: 99;
   width: 100%;
-  height: calc(100vh - 5.625rem);
 }
 
 .menu_content-header_mobile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.625rem;
+  gap: 0.9375rem;
 
   list-style: none;
+
+  z-index: 99;
 }
 
 .menu_content-header_mobile li {
@@ -121,11 +150,28 @@ body {
 
   font-weight: 500;
   font-size: 1.0625rem;
+
+  z-index: 99;
 }
 
 .btn_li-header_mobile a {
   font-weight: 700;
   font-size: 1.0625rem;
+
+  z-index: 99;
+}
+
+.background-header_mobile {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  background-color: var(--Background);
+  border-radius: 0rem 0rem 0.625rem 0.625rem;
+  width: 100%;
+  height: 4.75rem;
+
+  z-index: 95;
 }
 
 /* [DESKTOP] HEADER */
@@ -143,7 +189,8 @@ body {
   justify-content: center;
   align-items: center;
 
-  background-color: #f9f5ec;
+  background-color: var(--Background);
+  border-radius: 0rem 0rem 0.625rem 0.625rem;
 
   position: fixed;
   top: 0;
@@ -213,14 +260,24 @@ main {
 .section-accueil_index {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
 
-  height: calc(100vh - 5.375rem);
+  height: 100vh;
   width: 100%;
   background: linear-gradient(180deg, #ede9de 10.22%, #f9f5ec 100%);
 }
 
 .video-accueil_index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 4.75rem;
+  height: 100vh;
+  width: 100%;
+}
+
+.video_content-accueil_index {
   position: relative;
   border-radius: 0.625rem;
 
