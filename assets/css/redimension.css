@@ -1,0 +1,210 @@
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* [HEADER] */
+
+@media screen and (min-width: 1024px) {
+  .header_desktop {
+    display: flex;
+  }
+
+  .header_mobile {
+    display: none;
+  }
+}
+
+/* INDEX.HTML */
+
+/* [ACCUEIL] */
+
+@media screen and (min-width: 800px) {
+  .gradient_video_wrapper-accueil_index {
+    background: linear-gradient(
+      251deg,
+      rgba(237, 233, 222, 0) 3.19%,
+      rgba(237, 233, 222, 0.85) 76.81%
+    );
+  }
+
+  .content-accueil_index {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start; /* Pour centrer le contenu dans la boîte */
+    gap: 1.25rem;
+
+    bottom: 80px;
+    left: 80px; /* Centre horizontalement par rapport au parent */
+    transform: none; /* Ajuste pour centrer précisément */
+
+    width: auto;
+  }
+
+  .title-accueil_index p {
+    font-size: 3.875rem;
+  }
+
+  .description-accueil_index p {
+    font-size: 1.375rem;
+  }
+}
+
+/* [INFOS CONCOURS] */
+
+/* Annonce des contraintes */
+
+@media screen and (min-width: 700px) {
+  .inputs_text_form_contraintes-infos_concours_index {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    gap: 1.875rem;
+
+    width: 100%;
+  }
+
+  .content_form_contraintes-infos_concours_index form {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .flex_content_contraintes-infos_concours_index {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flextop_content_contraintes-infos_concours_index {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .title_content_contraintes-infos_concours_index {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .list_content_contraintes-infos_concours_index {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .list_content_contraintes-infos_concours_index li {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* [AVANTAGES CONCOURS] */
+
+@media screen and (min-width: 800px) {
+  .flexleft-avantages_concours_index {
+    display: flex;
+  }
+}
+
+/* [DERNIÈRE ÉDITION CONCOURS] */
+
+@media screen and (min-width: 800px) {
+  .video_winner-derniere_edition_concours_index iframe {
+    height: 20.1875rem;
+    aspect-ratio: 16 / 9;
+    border-radius: 0.625rem;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .item_winner-derniere_edition_concours_index {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .video_winner-derniere_edition_concours_index {
+    width: auto;
+  }
+
+  .video_winner-derniere_edition_concours_index iframe {
+    height: 20.1875rem;
+    width: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 0.625rem;
+  }
+}
+
+@media screen and (min-width: 1420px) {
+  .description_winner-derniere_edition_concours_index {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 1.5625rem;
+  }
+
+  .content_winner-derniere_edition_concours_index p {
+    text-align: center;
+  }
+
+  .content-derniere_edition_concours_index {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* @media screen and (min-width: 800px) {
+  .winner-derniere_edition_concours_index {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content_winner-derniere_edition_concours_index p {
+    text-align: center;
+  }
+
+  .content-derniere_edition_concours_index {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+} */
+
+/* LE_CONCOURS.PHP */
+
+@media screen and (min-width: 1024px) {
+  .background_title-main p {
+    font-size: 125px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .item_article-le_concours {
+    gap: 1.5625rem;
+  }
+
+  .item_article-le_concours.right {
+    flex-direction: row-reverse;
+  }
+
+  .item_article-le_concours.left {
+    flex-direction: row;
+  }
+}
+
+/* LES_EDITIONS.PHP */
+
+@media screen and (min-width: 800px) {
+  .item_article-les_editions {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
