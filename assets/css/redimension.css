@@ -180,22 +180,28 @@
 /* LE_CONCOURS.PHP */
 
 @media screen and (min-width: 1024px) {
-  .background_title-main p {
+  .background_title_page-main p {
     font-size: 125px;
   }
 }
 
 @media screen and (min-width: 800px) {
-  .item_article-le_concours {
-    gap: 1.5625rem;
-  }
-
-  .item_article-le_concours.right {
+  .content_article-le_concours.right {
+    display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.9375rem;
   }
 
-  .item_article-le_concours.left {
+  .content_article-le_concours.left {
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.9375rem;
+
+    width: 100%;
   }
 }
 

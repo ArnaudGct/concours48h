@@ -11,14 +11,14 @@ echo head('Le concours 48h - MMI Angoulême');
     <main class="main_all">
         <div style="height: calc(5.5625rem + 3.125rem);"></div>
 
-        <section class="title_section-main">
-            <div class="content_title_section-main">
+        <section class="title_page-main">
+            <div class="content_title_page-main">
                 <i class="fi fi-bs-medical-star"></i>
-                <p>Le éditions</p>
+                <p>Les éditions</p>
                 <i class="fi fi-bs-medical-star"></i>
             </div>
-            <div class="background_title-main">
-                <p>Le éditions</p>
+            <div class="background_title_page-main">
+                <p>Les éditions</p>
             </div>
         </section>
 

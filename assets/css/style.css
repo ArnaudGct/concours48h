@@ -191,6 +191,7 @@ body {
 
   background-color: var(--Background);
   border-radius: 0rem 0rem 0.625rem 0.625rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
 
   position: fixed;
   top: 0;
@@ -434,7 +435,7 @@ main {
 
   width: 90%;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1440px;
 }
 
 .date-infos_concours_index {
@@ -858,7 +859,7 @@ main {
   height: 1px;
   background-color: var(--Abysall-Anchorfish-Blue);
   margin: 3.125rem auto;
-  max-width: 1200px;
+  max-width: 1440px;
 }
 
 /* [AVANTAGES CONCOURS] */
@@ -904,7 +905,7 @@ main {
   width: 100%;
 }
 
-.title-avantages_concours_index {
+.title_section-main {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -912,12 +913,12 @@ main {
   width: 100%;
 }
 
-.title-avantages_concours_index svg {
+.title_section-main svg {
   width: 1.75rem;
   height: 1.75rem;
 }
 
-.title_content-avantages_concours_index {
+.title_content_section-main {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -927,14 +928,14 @@ main {
   width: 100%;
 }
 
-.title_content-avantages_concours_index p {
+.title_content_section-main p {
   color: var(--Abysall-Anchorfish-Blue);
   font-family: "Bricolage Grotesque";
   font-size: 1.75rem;
   font-weight: 800;
 }
 
-.title_content-avantages_concours_index div {
+.title_content_section-main div {
   height: 1.5px;
   border-radius: 50%;
   background: var(--Truffle-Trouble);
@@ -1195,13 +1196,21 @@ main {
 
 /* [TITRE DE LA PAGE] */
 
-.title_section-main {
+.title_page-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   position: relative;
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
+
+  padding: 1.875rem 0.625rem;
+  border-radius: 0.625rem;
+  border: 1px solid var(--Truffle-Trouble);
 }
 
-.content_title_section-main {
+.content_title_page-main {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -1210,23 +1219,17 @@ main {
   z-index: 5;
 }
 
-.content_title_section-main i {
-  color: var(--Abysall-Anchorfish-Blue);
-  font-size: 2.1875rem;
-
-  z-index: 5;
-}
-
-.content_title_section-main p {
-  color: var(--Abysall-Anchorfish-Blue);
+.content_title_page-main p {
+  color: var(--Truffle-Trouble);
+  font-family: "Bricolage Grotesque";
   text-align: center;
-  font-size: 1.875rem;
-  font-weight: 500;
+  font-size: 2.625rem;
+  font-weight: 800;
 
   z-index: 5;
 }
 
-.background_title-main {
+.background_title_page-main {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -1235,35 +1238,29 @@ main {
   z-index: 4;
 }
 
-.background_title-main p {
+.background_title_page-main p {
   white-space: nowrap;
-  color: rgba(44, 26, 23, 0.1);
+  font-family: "Bricolage Grotesque";
+  color: var(--Truffle-Trouble);
+  opacity: 0.1;
   text-align: center;
   font-size: 11vw;
-  font-weight: 900;
+  font-weight: 800;
 
   z-index: 4;
 }
 
 /* --- */
 
-.separation-main {
-  width: 40%;
-  height: 1px;
-  background-color: var(--Abysall-Anchorfish-Blue);
-  margin: 3.125rem auto;
-  max-width: 1200px;
-}
-
 .container_articles-le_concours {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.875rem;
+  gap: 2.5rem;
 
   width: 90%;
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -1273,6 +1270,16 @@ main {
   justify-content: center;
   align-items: center;
   gap: 0.9375rem;
+}
+
+.content_article-le_concours {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.9375rem;
+
+  width: 100%;
 }
 
 .illustration_article-le_concours {
@@ -1288,7 +1295,7 @@ main {
 .illustration_article-le_concours img {
   width: 100%;
   height: 18.75rem;
-  border-radius: 1.25rem;
+  border-radius: 0.625rem;
   object-fit: cover;
 }
 
@@ -1299,31 +1306,29 @@ main {
   font-weight: 400;
 }
 
-.content_article-le_concours {
+.description_article-le_concours {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  gap: 0.3125rem;
 
   width: 100%;
 }
 
-.content_article-le_concours p:nth-child(1) {
+.description_article-le_concours p {
   color: var(--Abysall-Anchorfish-Blue);
   font-size: 1.0625rem;
-  font-weight: 600;
+  font-weight: 400;
+  line-height: 150%; /* 1.6875rem */
 }
 
-.content_article-le_concours p:nth-child(2) {
-  color: var(--Abysall-Anchorfish-Blue);
-  font-size: 0.9375rem;
-  font-weight: 400;
+.description_article-le_concours span {
+  font-weight: 600;
 }
 
 .inscription-le_concours {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -1349,10 +1354,10 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  gap: 1.25rem;
+  gap: 1.875rem;
 
   width: 90%;
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -1361,33 +1366,47 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: start;
+  gap: 0.9375rem;
+
+  width: 100%;
 }
 
-.item_article-le_reglement p {
+.description_article-le_reglement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0.625rem;
+
+  width: 100%;
+}
+
+.description_article-le_reglement p {
   color: var(--Abysall-Anchorfish-Blue);
-  font-size: 0.9375rem;
+  font-size: 1.125rem;
+  font-style: normal;
   font-weight: 400;
+  line-height: 150%; /* 1.6875rem */
 }
 
-.item_article-le_reglement a {
+.description_article-le_reglement a {
   font-weight: 600;
   text-decoration: underline;
 }
 
-.item_article-le_reglement ul {
-  margin-left: 3.125rem;
-}
-
-.item_article-le_reglement li {
-  color: var(--Abysall-Anchorfish-Blue);
-  font-size: 0.9375rem;
-  font-weight: 400;
-}
-
-.item_article-le_reglement > p:nth-child(1) {
-  color: var(--Abysall-Anchorfish-Blue);
-  font-size: 1.0625rem;
+.description_article-le_reglement span {
   font-weight: 600;
+}
+
+.description_article-le_reglement ul {
+  margin-left: 1.25rem;
+}
+
+.description_article-le_reglement li {
+  color: var(--Abysall-Anchorfish-Blue);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 150%; /* 1.6875rem */
 }
 
 /* LES_EDTIONS.PHP */
@@ -1395,7 +1414,7 @@ main {
 .editions_section-les_editions {
   width: 90%;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1440px;
 }
 
 .flex-les_editions {
@@ -1574,7 +1593,7 @@ main {
 .participation_section-participer {
   width: 90%;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1440px;
 }
 
 .flex-participer {
@@ -1657,7 +1676,7 @@ main {
 
   width: 100%;
   height: 100%;
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -1696,7 +1715,7 @@ footer {
 
   width: 90%;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1440px;
 }
 
 .flex_content-footer {

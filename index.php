@@ -59,7 +59,7 @@ echo head('Le concours 48h - MMI Angoulême');
 
         <section class="avantages_concours_index">
             <div class="flex-avantages_concours_index">
-                <div class="title-avantages_concours_index">
+                <div class="title_section-main">
                     <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_104_44)">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -77,7 +77,7 @@ echo head('Le concours 48h - MMI Angoulême');
                             </clipPath>
                         </defs>
                     </svg>
-                    <div class="title_content-avantages_concours_index">
+                    <div class="title_content_section-main">
                         <p>Qu’est-ce que cela vous apporte ?</p>
                         <div></div>
                     </div>
@@ -183,7 +183,7 @@ echo head('Le concours 48h - MMI Angoulême');
         <section class="derniere_edition_concours_index">
             <div class="flex-derniere_edition_concours_index">
                 <div class="flex_content-derniere_edition_concours_index">
-                    <div class="title-avantages_concours_index">
+                    <div class="title_section-main">
                         <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_104_44)">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -201,7 +201,7 @@ echo head('Le concours 48h - MMI Angoulême');
                                 </clipPath>
                             </defs>
                         </svg>
-                        <div class="title_content-avantages_concours_index">
+                        <div class="title_content_section-main">
                             <p>La dernière édition ?</p>
                             <div></div>
                         </div>
